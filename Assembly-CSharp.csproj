@@ -49,12 +49,12 @@
     <Compile Include="Assets\Scripts\UI\WindowFadeUI.cs" />
     <Compile Include="Assets\Imports\Super_Retro_Collection\Resources\Prefabs_with_behavior\tall_grass_react_on_contact\Scripts\TallGrassAnimationOnContact.cs" />
     <Compile Include="Assets\Scripts\UI\LoadingUI.cs" />
-    <Compile Include="Assets\Scripts\Game\Object\ObjectAlphaBlend.cs" />
     <Compile Include="Assets\Imports\Super_Retro_Collection\Resources\Prefabs_with_behavior\chest_open_on_contact\Scripts\ChestAnimationOnContact.cs" />
     <Compile Include="Assets\Scripts\Systems\Managers\AuthManager.cs" />
     <Compile Include="Assets\Game\InputActions\FarmPlayerInput.cs" />
     <Compile Include="Assets\Scripts\Game\Object\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Game\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Game\Object\FadeHandler.cs" />
     <Compile Include="Assets\Scripts\Systems\GameLauncher.cs" />
     <Compile Include="Assets\Scripts\Utilitys\SaveLoader.cs" />
     <Compile Include="Assets\Scripts\Systems\Managers\ManagerBase.cs" />

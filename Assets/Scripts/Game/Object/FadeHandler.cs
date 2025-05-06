@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectAlphaBlend : MonoBehaviour
+public class FadeHandler : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer;
 
