@@ -46,17 +46,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\UI\HomeUI.cs" />
+    <Compile Include="Assets\Scripts\UI\WindowFadeUI.cs" />
     <Compile Include="Assets\Imports\Super_Retro_Collection\Resources\Prefabs_with_behavior\tall_grass_react_on_contact\Scripts\TallGrassAnimationOnContact.cs" />
     <Compile Include="Assets\Scripts\UI\LoadingUI.cs" />
     <Compile Include="Assets\Scripts\Game\Object\ObjectAlphaBlend.cs" />
     <Compile Include="Assets\Imports\Super_Retro_Collection\Resources\Prefabs_with_behavior\chest_open_on_contact\Scripts\ChestAnimationOnContact.cs" />
     <Compile Include="Assets\Scripts\Systems\Managers\AuthManager.cs" />
     <Compile Include="Assets\Game\InputActions\FarmPlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Game\Object\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Game\Player\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Systems\GameLauncher.cs" />
     <Compile Include="Assets\Scripts\Utilitys\SaveLoader.cs" />
     <Compile Include="Assets\Scripts\Systems\Managers\ManagerBase.cs" />
     <Compile Include="Assets\Scripts\Systems\Managers\Management.cs" />
+    <Compile Include="Assets\Scripts\Systems\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Game\Object\TeleportArea.cs" />
     <Compile Include="Assets\Scripts\Game\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Imports\Super_Retro_Collection\Resources\Prefabs\Crops\Scripts\SpriteSelectFrame.cs" />
     <Compile Include="Assets\Imports\Super_Retro_Collection\Resources\Prefabs_with_behavior\block_push_on_contact\Scripts\BlockPushOnContact.cs" />
@@ -67,6 +71,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Packages\com.singularitygroup.hotreload\package.json" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -728,6 +733,9 @@
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>C:\UnityFiles\BestFarmer\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:\UnityFiles\BestFarmer\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Editor">
       <HintPath>C:\UnityFiles\BestFarmer\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
     </Reference>
@@ -884,20 +892,27 @@
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>C:\UnityFiles\BestFarmer\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:\UnityFiles\BestFarmer\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>C:\UnityFiles\BestFarmer\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>C:\UnityFiles\BestFarmer\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>C:\UnityFiles\BestFarmer\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.2D.IK.Editor">
       <HintPath>C:\UnityFiles\BestFarmer\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Animation.Editor">
+      <HintPath>C:\UnityFiles\BestFarmer\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="SingularityGroup.HotReload.Runtime.Public.csproj">
+      <Project>{745fd0a3-4055-60eb-9bab-29663fa8bf81}</Project>
+      <Name>SingularityGroup.HotReload.Runtime.Public</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

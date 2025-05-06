@@ -6,6 +6,7 @@ using UnityEngine;
 public class ObjectAlphaBlend : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer;
+
     private string _triggerTag;
 
     private Color _baseColor;
@@ -22,6 +23,8 @@ public class ObjectAlphaBlend : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+      
+
         if (other.CompareTag(_triggerTag))
         {
             _renderer.color = _targetColor;
@@ -36,6 +39,4 @@ public class ObjectAlphaBlend : MonoBehaviour
             _renderer.color = _baseColor;
         }
     }
-
- 
 }
